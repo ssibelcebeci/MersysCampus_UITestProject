@@ -5,8 +5,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.io.File;
+import java.time.Duration;
 import java.util.List;
 
 public class ReusableMethods extends BaseDriver {
@@ -96,5 +99,21 @@ public class ReusableMethods extends BaseDriver {
 
     public void waitForVisibility(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static boolean isFileDownloaded(String extension) {
+        String downloadPath = System.getProperty("user.home") + "/Downloads";
+        File folder = new File(downloadPath);
+
+        File[] files = folder.listFiles((dir, name) ->
+                name.toLowerCase().endsWith("." + extension.toLowerCase())
+        );
+
+        return files != null && files.length > 0;
+    }
+
+    public void waitUntilAttributeToBe(WebElement element, String attribute, String value) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.attributeToBe(element, attribute, value));
     }
 }
