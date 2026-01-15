@@ -5,15 +5,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pages.AssignmentsPage;
 import pages.CoursePage;
 import pages.Homepage;
 import utilities.ReusableMethods;
-
-import java.util.Random;
 
 public class AssignmentSubmissionSteps extends ReusableMethods {
 
@@ -25,9 +22,13 @@ public class AssignmentSubmissionSteps extends ReusableMethods {
     String randomName = faker.name().fullName();
     WebElement iframe;
 
+    @When("verify home page loaded")
+    public void verifyHomePageLoaded() {
+        wait.until(ExpectedConditions.visibilityOfAllElements(hp.courseGrid));
+    }
+
     @When("click on ASSIGNMENTS button")
     public void click_on_assignments_button() {
-        wait.until(ExpectedConditions.visibilityOfAllElements(hp.courseGrid));
         myClick(hp.assignmentsBtn);
     }
 
@@ -71,7 +72,7 @@ public class AssignmentSubmissionSteps extends ReusableMethods {
 
     @When("click on course name")
     public void click_on_course_name() {
-        myClick(ap.courseBtn);
+        myClick(ap.courseNameBtn);
     }
 
     @Then("verify directed to course details")

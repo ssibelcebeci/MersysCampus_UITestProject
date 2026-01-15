@@ -36,4 +36,7 @@ public class Homepage {
 
     @FindBy(xpath = "//div/mat-grid-tile")
     public List<WebElement> courseGrid;
+
+    @FindBy(xpath = "//ms-layout-menu-button[2]/button")
+    public WebElement calendarBtn;
 }

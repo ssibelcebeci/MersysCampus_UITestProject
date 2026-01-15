@@ -6,6 +6,7 @@ Feature: Assignment Submission
     Then click on LOGIN button
 
     Scenario: Submit Assignments
+      When verify home page loaded
       When click on ASSIGNMENTS button
       Then verify ASSIGNMENTS page
       When click on SUBMIT button
