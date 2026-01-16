@@ -1,5 +1,11 @@
 package pages;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import utilities.BaseDriver;
+
+public class CalendarPage {
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
@@ -20,6 +26,8 @@ public class CalendarPage extends ReusableMethods {
         PageFactory.initElements(BaseDriver.driver, this);
     }
 
+    @FindBy(xpath = "//button[@mat-icon-button]/following-sibling::span")
+    public WebElement calendarTitle;
     @FindBy(xpath = "//div/table/thead/tr/th[5]")
     public WebElement UIDate;
 

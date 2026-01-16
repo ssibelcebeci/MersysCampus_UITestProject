@@ -3,6 +3,9 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.BaseDriver;
+
+public class AssignmentsPage {
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import utilities.BaseDriver;
@@ -16,6 +19,8 @@ public class AssignmentsPage extends ReusableMethods {
         PageFactory.initElements(BaseDriver.driver, this);
     }
 
+    @FindBy(xpath = "//button[@mat-icon-button]/following-sibling::span")
+    public WebElement assignmentsTitle;
     @FindBy(xpath = "(//div[1]/div[2]/span)[1]")
     public WebElement assignmentText;
 
