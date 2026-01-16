@@ -10,9 +10,6 @@ public class UserMessagesNewPage {
         PageFactory.initElements(BaseDriver.driver, this);
     }
 
-   // @FindBy(css = "iframe[id^='tiny-angular']")
-    //public WebElement iframeText;
-
     @FindBy(xpath = "//div[@class='mat-mdc-form-field-infix']")
     public WebElement receivers;
 
@@ -22,14 +19,8 @@ public class UserMessagesNewPage {
     @FindBy(xpath = "//span[contains(text(), 'Student_1')]")
     public WebElement nameStudent_1;
 
-    @FindBy(xpath = "//mat-checkbox//input[@type='checkbox']")
-    public WebElement selectReceiver;
-
     @FindBy(xpath = "//span[text()='Add & Close']")
     public WebElement addCloseBtn;
-
-    @FindBy(xpath = "//span[contains(text(), 'Student_1 11A')]")
-    public WebElement addedReceiver;
 
     @FindBy(xpath = "//input[@placeholder='Subject']")
     public WebElement subject;
@@ -63,9 +54,6 @@ public class UserMessagesNewPage {
 
     @FindBy(xpath = "//button[@aria-label='Close']")
     public WebElement errorMessageClose;
-
-    @FindBy(css = "button.mdc-icon-button")
-    public WebElement bell;
 
     @FindBy(xpath = "(//div[contains(@class, 'mat-badge-medium')])[2]")
     public WebElement newMessage;

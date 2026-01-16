@@ -34,9 +34,6 @@ public class LoggedInPage {
     @FindBy(css = "svg[data-icon='bars']")
     public WebElement hamburgerMenu;
 
-    @FindBy(css = "svg[data-icon='user']")
-    public WebElement user;
-
     @FindBy(xpath = "//span[contains(@class, 'username')]")
     public WebElement profileSettings;
 
@@ -55,25 +52,14 @@ public class LoggedInPage {
     @FindBy(xpath = "//button[@role='menuitem']//span[text()='Trash']")
     public WebElement trash;
 
-    @FindBy(xpath = "//*[normalize-space()='Announcements']")
-    public WebElement announcements;
-
-    @FindBy(xpath = "//mat-toolbar//button[@mat-icon-button][2]")
-    public WebElement announcementsClose;
-
     @FindBy(xpath = "//span[text()='My Certificates']")
     public WebElement myCertificates;
 
     @FindBy(xpath = "//span[text()='My Files']")
     public WebElement myFiles;
 
-    @FindBy(xpath = "//span[text()='Change Password']")
-    public WebElement changePassword;
-
     @FindBy(xpath = "//span[text()='Settings]")
     public WebElement settings;
 
-    @FindBy(xpath = "//span[text()='Sign Out]")
-    public WebElement signOut;
 
 }

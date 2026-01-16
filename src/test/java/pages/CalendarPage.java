@@ -1,12 +1,5 @@
 package pages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import utilities.BaseDriver;
-
-public class CalendarPage {
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,9 +9,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utilities.BaseDriver;
 import utilities.ReusableMethods;
-
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
+
 
 public class CalendarPage extends ReusableMethods {
 
