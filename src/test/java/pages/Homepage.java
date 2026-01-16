@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.BaseDriver;
 
+import java.util.List;
+
 public class Homepage {
 
     public Homepage() {
@@ -28,4 +30,13 @@ public class Homepage {
 
     @FindBy(xpath = "//button[@role='menuitem'][.//span[normalize-space()='Settings']]")
     public WebElement profileSettings;
+
+    @FindBy(xpath = "(//span[text()='Assignments'])[1]")
+    public WebElement assignmentsBtn;
+
+    @FindBy(xpath = "//div/mat-grid-tile")
+    public List<WebElement> courseGrid;
+
+    @FindBy(xpath = "//ms-layout-menu-button[2]/button")
+    public WebElement calendarBtn;
 }
