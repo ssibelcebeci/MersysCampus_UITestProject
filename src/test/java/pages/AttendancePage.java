@@ -11,7 +11,7 @@ public class AttendancePage {
         PageFactory.initElements(BaseDriver.driver, this);
     }
 
-    @FindBy(xpath = "//div[@role='tab']//span[contains(text(),'ATTENDANCE EXCUSES')]")
+    @FindBy(xpath = "//*[text()=' ATTENDANCE EXCUSES ']")
     public WebElement attendanceExcuseBtn;
 
     @FindBy(xpath = "//button[.//fa-icon//*[contains(@data-icon,'plus')]]")
@@ -25,4 +25,7 @@ public class AttendancePage {
 
     @FindBy(xpath = "//button[.//span[normalize-space()='Send']]")
     public WebElement sendBtn;
+
+    @FindBy(xpath = "//button[@mat-icon-button]/following-sibling::span")
+    public WebElement attendanceTitle;
 }

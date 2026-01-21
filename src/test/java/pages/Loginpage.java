@@ -10,7 +10,7 @@ public class Loginpage {
         PageFactory.initElements(BaseDriver.driver, this);
     }
 
-    @FindBy(xpath = "(//div[@class='mat-mdc-form-field-infix']/input)[1]")
+    @FindBy(xpath = "//input[@formcontrolname='username']")
     public WebElement usernameInput;
 
     @FindBy(xpath = "(//div[@class='mat-mdc-form-field-infix']/input)[2]")
