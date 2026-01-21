@@ -31,6 +31,8 @@ public class Homepage {
     @FindBy(xpath = "//button[@role='menuitem'][.//span[normalize-space()='Settings']]")
     public WebElement profileSettings;
 
+    @FindBy(xpath = "(//span[@class='mdc-button__label']/fa-icon)[4]")
+    public WebElement assignmentBtn;
     @FindBy(xpath = "(//span[text()='Assignments'])[1]")
     public WebElement assignmentsBtn;
 
