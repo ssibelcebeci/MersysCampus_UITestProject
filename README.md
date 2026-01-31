@@ -1,4 +1,4 @@
-# MERSYS CAMPUS | UI AUTOMATION FRAMEWORK
+# MERSYS CAMPUS | UI AUTOMATION FRAMEWORK (User Story Based)
 
 This repository contains a **UI Test Automation project** developed using **Java & Selenium WebDriver**, structured based on **User Stories (US)** and their **Acceptance Criteria**. The framework validates critical user paths of a campus/school management system, covering authentication, navigation, messaging, finance, personalization, and academics.
 
