@@ -1,46 +1,106 @@
 # MERSYS CAMPUS | UI AUTOMATION FRAMEWORK
 
-### TECHNICAL SPECIFICATION
-| Category | Tool |
-| :--- | :--- |
-| **Language** | Java |
-| **Automation** | Selenium WebDriver |
-| **Framework** | Cucumber (BDD) |
-| **Design Pattern** | Page Object Model (POM) |
-| **Build Tool** | Maven |
+This repository contains a **UI Test Automation project** developed using **Java & Selenium WebDriver**, structured based on **User Stories (US)** and their **Acceptance Criteria**. The framework validates critical user paths of a campus/school management system, covering authentication, navigation, messaging, finance, personalization, and academics.
 
 ---
 
-### DIRECTORY STRUCTURE
-```text
-src/test/java
-├── hooks               # Setup and Teardown (Hooks.java)
-├── pages               # WebElements and Page-specific methods
-├── runner              # TestRunner configuration
-├── stepDefinitions     # Gherkin-to-Java mapping logic
-└── utilities           # BaseDriver, ConfigReader, ReusableMethods
+## Project Overview
 
-src/test/resources
-└── features            # Business requirements in Gherkin format
+* User Story–driven test design
+* Modular test structure per User Story
+* Page Object Model (POM) for maintainability
+* Reusable methods and base configuration
+* UI element and workflow validation
 
-EST SCOPE & COVERAGE
-The framework automates critical user paths based on official User Stories:
+---
 
-CORE AUTH & UI: Login verification, Home navigation, and Hamburger Menu interactions.
+## Tech Stack
 
-MESSAGING: Full lifecycle of internal communications (Inbox, Outbox, Compose, Attachments).
+* **Java**
+* **Selenium WebDriver**
+* **Cucumber (BDD)**
+* **Maven**
+* **TestNG**
+* **Git & GitHub**
 
-FINANCE: Tuition fee tracking, Stripe payment gateway integration, and report downloads.
+---
 
-PERSONALIZATION: Profile image management and application theme settings.
+## Environment
 
-ACADEMICS: Attendance tracking and grading system (Transcripts) validation.
+* **Base URL:**  
+  `https://test.mersys.io/`
+  
+---
 
-CONTRIBUTORS
-Sibel
+## Authentication & Core UI (US_1)
 
-Gürhan
+* Login with valid and invalid credentials
+* Verify home page navigation
+* Hamburger menu interaction validation
+* Access control and page visibility checks
 
-Ramazan
+---
 
-İbrahim
+## Messaging (US_2)
+
+* Inbox, Outbox, Compose messages
+* Attachments upload and download
+* Message lifecycle validation
+* Negative scenarios for missing fields
+
+---
+
+## Finance (US_3)
+
+* Tuition fee tracking
+* Stripe payment gateway integration
+* Invoice and report downloads
+* Response and page load validations
+
+---
+
+## Personalization (US_4)
+
+* Profile image upload and update
+* Theme switching and settings validation
+* User preference persistence
+
+---
+
+## Academics (US_5)
+
+* Attendance tracking
+* Grading and transcripts validation
+* Negative scenarios for invalid entries
+* UI performance checks
+
+---
+
+## Performance Criteria
+
+* Page load times ≤ **2000 ms**
+* Form submission & data retrieval ≤ **1000 ms**
+* Tests fail if UI responsiveness thresholds exceeded
+
+---
+
+## Testing Principles
+
+* User Story–based test coverage
+* Positive & negative scenario testing
+* Reusable base configuration
+* Page Object Model for separation of concerns
+* Maintainable and scalable test design
+
+---
+
+## Contributors
+
+* **Sibel**  
+* **Gürhan**  
+* **Ramazan**  
+* **İbrahim**
+
+> Developed collaboratively, following real-world UI automation standards, for learning and portfolio purposes.
+
+
